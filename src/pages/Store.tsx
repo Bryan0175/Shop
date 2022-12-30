@@ -16,10 +16,11 @@ export function Store() {
   return (
     <>
       <h1>Tienda</h1>
-        <input placeholder="¿Qué servicio buscas?"
+        <input placeholder="¿Qué producto buscas?"
                type="text"
                value={text}
                onChange={(e) => setText(e.target.value)}
+               style={{margin:10, borderRadius: 5, padding: 10}}
                autoFocus={true}/>
       <Row md={2} xs={1} lg={3} className="g-3">
         {filteredServices.map(item => (
