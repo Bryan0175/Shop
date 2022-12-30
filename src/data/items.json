@@ -1,0 +1,65 @@
+[
+  {
+    "id": 1,
+    "name": "Gorras",
+    "category": "accessories",
+    "price": 10000,
+    "imgUrl": "/imgs/cap.png"
+  },
+  {
+    "id": 2,
+    "name": "Maletines",
+    "category": "accessories",
+    "price": 20000,
+    "imgUrl": "/imgs/briefcase.png"
+  },
+  {
+    "id": 3,
+    "name": "Camisetas",
+    "category": "clothe",
+    "price": 15000,
+    "imgUrl": "/imgs/clothes.png"
+  },
+  {
+    "id": 4,
+    "name": "Guantes",
+    "category": "accessories",
+    "price": 8000,
+    "imgUrl": "/imgs/glove.png"
+  },
+  {
+    "id": 5,
+    "name": "Chaquetas",
+    "category": "clothe",
+    "price": 40000,
+    "imgUrl": "/imgs/jacket.png"
+  },
+  {
+    "id": 6,
+    "name": "Zapatos",
+    "category": "clothe",
+    "price": 25000,
+    "imgUrl": "/imgs/shoes.png"
+  },
+  {
+    "id": 7,
+    "name": "Pantalonetas",
+    "category": "clothe",
+    "price": 12000,
+    "imgUrl": "/imgs/shorts.png"
+  },
+  {
+    "id": 8,
+    "name": "Reloj",
+    "category": "accessories",
+    "price": 25000,
+    "imgUrl": "/imgs/ticker.png"
+  },
+  {
+    "id": 9,
+    "name": "Camisetas",
+    "category": "clothe",
+    "price": 15000,
+    "imgUrl": "/imgs/t-shirt.png"
+  }
+]
