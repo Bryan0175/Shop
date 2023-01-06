@@ -20,8 +20,6 @@
   </p>
 </div>
 
-
-
 <!-- TABLE OF CONTENTS -->
 <details>
   <summary>Table of Contents</summary>
@@ -49,7 +47,6 @@
   </ol>
 </details>
 
-
 <!-- Folder Structure -->
 ## Folder Structure
 
@@ -65,13 +62,13 @@ The base structure that i used to work in this project is basically this:
  <li>
     <span><strong>/src/components</strong></span>
     <ul>
-      <li>This folder has 4 components:</li>
-      <ol>
+      <li>First folder is called components and this is where all of our components are going to go things like our shopping cart our shopping cart items and so on ,this folder has 4 components:</li>
+      <ul>
         <li>CardItem: This component has the products selected by the customer</li>
         <li>Navbar: This is the navigation bar, it has the brand of the company, the routes of the different pages and the icon of the shopping cart</li>
         <li>ShoppingCart:</li>
         <li>StoreItem:</li>
-      </ol>
+      </ul>
     </ul>
   </li>
   <li>
@@ -117,7 +114,11 @@ The base structure that i used to work in this project is basically this:
 
 ![favicon](https://user-images.githubusercontent.com/50422794/210928339-2496140e-5894-48f2-b29d-fcf5ac950f3b.png)
 
-There are many great README templates available on GitHub; however, I didn't find one that really suited my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need -- I think this is it.
+In this project i'm not only going to be building an advanced shopping cart using typescript and react but i'm also going to be structuring this project like a real world large scale project and that means that i'm going to have advanced file structure folder structure naming conventions best practices.
+
+![image](https://user-images.githubusercontent.com/50422794/211107504-52cb2510-30cf-4080-8111-7a3b26133fc2.png)
+
+You can see we have twice pages different, the only page that has any content is the store page, but the important thing is that if we add things to the cart, we can go to a different page, we can still open the cart and interact with it, we go back to our store and those changes will bring effect so the shopping cart will work on multiple pages there are multiple ways to interact for example with the plus minus buttons you can remove stuff by clicking this remove button you can remove stuff inside the shopping cart etc. 
 
 Here's why:
 * Your time should be focused on creating something amazing. A project that solves a problem and helps others
@@ -126,26 +127,23 @@ Here's why:
 
 Of course, no one template will serve all projects since your needs may be different. So I'll be adding more in the near future. You may also suggest changes by forking this repo and creating a pull request or opening an issue. Thanks to all the people have contributed to expanding this template!
 
-Use the `BLANK_README.md` to get started.
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### Built With
 
 This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
 
-* [![Next][Next.js]][Next-url]
-* [![React][React.js]][React-url]
-* [![Vue][Vue.js]][Vue-url]
-* [![Angular][Angular.io]][Angular-url]
-* [![Svelte][Svelte.dev]][Svelte-url]
-* [![Laravel][Laravel.com]][Laravel-url]
+* <a>[![React][React.js]][React-url]</a>
+* <a>![image](https://user-images.githubusercontent.com/50422794/211116164-7b79fadd-869a-43e3-8053-a224f080f9c2.png)</a>
 * [![Bootstrap][Bootstrap.com]][Bootstrap-url]
-* [![JQuery][JQuery.com]][JQuery-url]
+* ![image](https://user-images.githubusercontent.com/50422794/211115885-4109d78c-7874-4286-95df-740a17471561.png)
+* ![image](https://user-images.githubusercontent.com/50422794/211116212-ef61c9ba-9787-42f1-917d-b49a15a2d75c.png)
+* ![image](https://user-images.githubusercontent.com/50422794/211116261-6cda0e56-0192-4c44-a9ec-7f7f921e1f79.png)
+* ![image](https://user-images.githubusercontent.com/50422794/211116300-7c7fbe4b-0b0e-4bb7-9972-ef832ea71bd3.png)
+* ![image](https://user-images.githubusercontent.com/50422794/211116083-1ff4eb91-f7a6-47aa-ad14-07370b8caa26.png)
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
 
 <!-- GETTING STARTED -->
 ## Getting Started
