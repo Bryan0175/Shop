@@ -202,3 +202,112 @@ _We are going to use some libraries and frameworks to be able to improve our cod
   of icons, which allows us to use them as if they were components of react
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## Comment Code
+
+* Store
+
+  ```js
+  const filterBrands = useMemo(()=>{
+        return (itemBrand: string) => {
+            const result = storeItems.filter(fil => {
+                    return fil.brand === itemBrand;
+             })
+            setData(result)
+        }
+    },[])
+  ```
+  filterBrands is a function that takes in a string itemBrand as an argument. The function is created using the useMemo hook.
+
+  The function filters an array called storeItems and returns a new array that contains only the elements that have a brand property that matches the itemBrand       argument. The resulting array is then passed to a function called setData, which presumably updates the component's state with the new data.
+
+  The useMemo hook is used to improve performance by returning a memoized value. This means that the function will only be re-evaluated if one of the values in the   dependency array (the second argument to useMemo) has changed. If none of the dependencies have changed, the hook will return the previously computed value         instead of executing the function again.
+  
+  ```js
+    const filteredServices = useMemo(() => {
+          return data.filter(item => (
+              item.name.toLowerCase().includes(text.toLowerCase())
+          ))
+    },[storeItems, text]);
+  ```
+  This code defines a constant called filteredServices which is initialized to the result of calling the useMemo hook with a function and an array of dependencies     as arguments.
+
+  The function passed to useMemo filters the data array based on whether each item's name property includes a specified text (text). The filter method returns a new   array containing only the elements that pass the test implemented by the provided function. In this case, the test is whether the lowercase version of the name     property includes the lowercase version of the text string.
+
+  The useMemo hook's array of dependencies contains the storeItems and text variables. This means that filteredServices will only be recalculated if storeItems or     text change.
+
+  Finally, the filteredServices constant is returned.
+  
+* ShoppingCart
+  
+  ```js
+    useEffect(()=>{
+        const result = cartItems.map(fil => {
+          const item = storeItems.find(i => i.id === fil.id)
+          const total = formatCurrency((item?.price || 0) * fil.quantity)
+          return ` ${fil.quantity} - ${item.name} : ${total}`
+        })
+      setMessage(result)
+    },[])
+  ```
+  
+  The effect function in this case is defined as an arrow function and it does the following:
+
+  1. It maps over the cartItems array and returns an array of strings in the format ${quantity} - ${name} : ${total}. For each element in the cartItems array, the        function does the following:
+    * It finds the corresponding item in the storeItems array by looking for an item whose id property matches the id property of the cartItems element.
+    * It calculates the total for each item by multiplying its price by its quantity.
+    * It formats the total as a currency using the formatCurrency function.
+    * It returns a string with the item's quantity, name, and total.
+  2. It calls the setMessage function with the resulting array of strings as an argument. The setMessage function is probably a hook that updates the component's        state   with the new message.
+
+  The effect function has an empty array of dependencies, so it will only run once, after the initial render.
+  
+  ```javascript
+    {formatCurrency(
+      cartItems.reduce((total, cartItem) => {
+         const item = storeItems.find(i => i.id === cartItem.id)
+        return total + (item?.price || 0) * cartItem.quantity
+      }, 0)
+    )}
+  ```
+  
+  This fragment code is using the formatCurrency function to format a value as a currency. It looks like the value being formatted is being calculated using the       cartItems array and the storeItems array.
+
+  The value being formatted is being calculated using the reduce method called on the cartItems array. The reduce method executes a reducer function (that you         provide) on each element of the array, resulting in a single output value.
+
+  The reducer function in this case takes two arguments: total and cartItem. It does the following:
+
+  1. It finds the corresponding item in the storeItems array by looking for an item whose id property matches the id property of the cartItem.
+
+  2. It calculates the total by adding the product of the cartItem's quantity and the corresponding item's price to the total. If the corresponding item is not          found (item is undefined), it uses 0 as the price.
+
+  3. It returns the updated total.
+
+  The reduce method is called with an initial value of 0 for the total argument. This initial value is used as the total for the first call to the reducer function.   The result of the reduce method is the final value of total, which is passed to the formatCurrency function and returned.
+  
+* ShoppingCartContext
+  
+  ```javascript
+    function increaseCartQuantity(id: number) {
+      setCartItems(currItems => {
+        if (currItems.find(item => item.id === id) == null) {
+          return [...currItems, { id, quantity: 1 }]
+        } else {
+          return currItems.map(item => {
+            if (item.id === id) {
+              return { ...item, quantity: item.quantity + 1 }
+            } else {
+              return item
+            }
+          })
+        }
+      })
+    }
+  ```
+  Is a function called increaseCartQuantity that takes a number id as an argument and updates the cartItems state by adding an item with the given id   or             increasing the quantity of the item if it already exists in the cartItems array.
+
+  The setCartItems function is probably a hook that updates the component's state with the new cartItems value, the function does the following:
+
+  It calls the setCartItems function with a new function as an argument. This new function takes the current cartItems value as an argument and returns the           updated value. Inside the new function, it checks if the current cartItems array contains an item with the given id using the find method. If it doesn't find such   an item (find returns null), it returns a new array that has the current items and a new item with the given id and a quantity of 1. It does this using the spread   operator (...) to create a new array that includes all the current items and the new item.
+
+  If the find method does find an item with the given id, it returns a new array with the same items, but with the item with the given id having its quantity         increased by 1. It does this using the map method to create a new array with the updated items. The increaseCartQuantity function returns nothing. It only updates   the component's state using the setCartItems hook.
