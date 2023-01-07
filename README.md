@@ -31,13 +31,7 @@
       </ul>
     </li>
     <li><a href="#folder-structure">Folder Structure</a></li>
-    <li>
-      <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#Installation-frameworks/libraries">Installation frameworks/libraries</a></li>
-      </ul>
-    </li>
-    <li><a href="#comment-code">Usage</a></li>
+    <li><a href="#getting-started">Getting Started</a></li>
   </ol>
 </details>
 
@@ -172,7 +166,7 @@ We are going to use veet to create our react app instead of create react app and
   $ npm run dev
   ```
   
-### Installation frameworks/libraries
+### Installation
 
 _We are going to use some libraries and frameworks to be able to improve our code and the performance of our application in general._
 
@@ -206,14 +200,5 @@ _We are going to use some libraries and frameworks to be able to improve our cod
   ```
   For the icons we use React Icons, this is a library
   of icons, which allows us to use them as if they were components of react
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- USAGE EXAMPLES -->
-## Comment code
-
-
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
