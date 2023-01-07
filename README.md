@@ -2,7 +2,7 @@
 
 
 <!-- PROJECT LOGO -->
-<br />a
+<br />
 <div align="center">
   
   ![brand](https://user-images.githubusercontent.com/50422794/210927623-aaef949f-e6f3-4ec6-b87b-59e78da564b8.png)

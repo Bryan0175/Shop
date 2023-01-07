@@ -1,15 +1,18 @@
-import { Button, Card } from "react-bootstrap"
+import { Button } from "react-bootstrap"
 import { useShoppingCart } from "../context/ShoppingCartContext"
 import { formatCurrency } from "../utilities/formatCurrency"
+import VanillaTilt from 'vanilla-tilt';
+import "../styles/card.css";
 
 type StoreItemProps = {
   id: number
   name: string
+  brand: string
   price: number
   imgUrl: string
 }
 
-export function StoreItem({ id, name, price, imgUrl }: StoreItemProps) {
+export function StoreItem({ id, name, price, brand, imgUrl }: StoreItemProps) {
   const {
     getItemQuantity,
     increaseCartQuantity,
@@ -17,51 +20,48 @@ export function StoreItem({ id, name, price, imgUrl }: StoreItemProps) {
     removeFromCart,
   } = useShoppingCart()
   const quantity = getItemQuantity(id)
+  // @ts-ignore
+  VanillaTilt.init(document.querySelectorAll(".box"),
+      {
+        max:25,
+        speed:400
+      })
   return (
-    <Card className="h-100">
-      <Card.Img
-        variant="top"
-        src={imgUrl}
-        height="300px"
-        style={{ objectFit: "cover", padding: "10px" }}
-      />
-      <Card.Body className="d-flex flex-column">
-        <hr/>
-        <Card.Title className="d-flex justify-content-between align-items-baseline mb-4">
-          <span className="fs-4" style={{textTransform:"capitalize"}}>{name}</span>
-          <span className="ms-2 text-muted fs-6">{formatCurrency(price)}</span>
-        </Card.Title>
-        <div className="mt-auto">
-          {quantity === 0 ? (
-            <Button className="w-100" onClick={() => increaseCartQuantity(id)}>
-              + Agregar
-            </Button>
-          ) : (
-            <div
-              className="d-flex align-items-center flex-column"
-              style={{ gap: ".5rem" }}
-            >
-              <div
-                className="d-flex align-items-center justify-content-center"
-                style={{ gap: ".5rem" }}
-              >
-                <Button onClick={() => decreaseCartQuantity(id)}>-</Button>
-                <div>
-                  <span className="fs-3 m-3">{quantity}</span>
+      <>
+        <div className="container1">
+          <div className="box" data-text={brand}>
+            <h5 className="name">{name}</h5>
+            <h6 className="price">{formatCurrency(price)}</h6>
+            {quantity === 0 ? (
+            <a className="buy"  onClick={() => increaseCartQuantity(id)}>+ Agregar</a>
+            ) : (
+                <div
+                    className="d-flex align-items-center flex-column cart"
+                    style={{ gap: ".5rem" }}
+                >
+                  <div
+                      className="d-flex align-items-center justify-content-center"
+                      style={{ gap: ".5rem" }}
+                  >
+                    <Button onClick={() => decreaseCartQuantity(id)}>-</Button>
+                    <div>
+                      <span className="fs-3 m-3">{quantity}</span>
+                    </div>
+                    <Button onClick={() => increaseCartQuantity(id)}>+</Button>
+                  </div>
+                  <Button
+                      onClick={() => removeFromCart(id)}
+                      variant="danger"
+                      size="sm"
+                  >
+                    Cancelar
+                  </Button>
                 </div>
-                <Button onClick={() => increaseCartQuantity(id)}>+</Button>
-              </div>
-              <Button
-                onClick={() => removeFromCart(id)}
-                variant="danger"
-                size="sm"
-              >
-                Remove
-              </Button>
-            </div>
-          )}
+            )}
+            <div className="circle"></div>
+            <img src={imgUrl} className="product"/>
+          </div>
         </div>
-      </Card.Body>
-    </Card>
+      </>
   )
 }

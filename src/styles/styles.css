@@ -1,0 +1,17 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+.contentHome{
+    display: none;
+}
+
+@media screen and (max-width: 600px) {
+    .contentHome{
+        display: block;
+        margin-top: 20px;
+    }
+    .contentHome h1{
+        text-align: center;
+        margin-bottom: 20px;
+        font-style: italic;
+    }
+}

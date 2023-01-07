@@ -19,7 +19,8 @@
     "react-icons": "^4.7.1",
     "react-router-dom": "^6.3.0",
     "react-whatsapp": "^0.3.0",
-    "twilio": "^3.30.0"
+    "twilio": "^3.30.0",
+    "vanilla-tilt": "^1.8.0"
   },
   "devDependencies": {
     "@types/react": "^18.0.0",

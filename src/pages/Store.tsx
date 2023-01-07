@@ -1,64 +1,69 @@
-import {Button, Col, Dropdown, Row} from "react-bootstrap"
+import {Button, Col, Row} from "react-bootstrap"
+import {FaSearch} from 'react-icons/fa'
 import { StoreItem } from "../components/StoreItem"
 import storeItems from "../data/items.json"
-import {useMemo, useState} from "react";
+import {useMemo, useState} from "react"
 
 export function Store() {
 
     const [data, setData] = useState(storeItems)
-    // const [text, setText] = useState("");
 
-    // const filteredServices = useMemo(() => {
-    //     return data.filter(item => (
-    //         item.name.toLowerCase().includes(text.toLowerCase())
-    //     ))
-    // },[storeItems, text]);
+    {/* Input Filter */}
+    const [text, setText] = useState("");
 
-    // const filters = (itemBrand: string) => {
-    //   const result = data.filter(item => (
-    //       text ? item.name.toLowerCase().includes(text.toLowerCase()) : item.brand === itemBrand
-    //   ))
-    //     setData(result)
-    // }
+    const filteredServices = useMemo(() => {
+        return data.filter(item => (
+            item.name.toLowerCase().includes(text.toLowerCase())
+        ))
+    },[storeItems, text]);
 
-    const filterBrands = (itemBrand: string) => {
-        const result = storeItems.filter(fil => {
-            return fil.brand === itemBrand;
-        })
-        setData(result)
-    }
+    const filterBrands = useMemo(()=>{
+        return (itemBrand: string) => {
+            const result = storeItems.filter(fil => {
+                    return fil.brand === itemBrand;
+             })
+            setData(result)
+        }
+    },[])
 
+    // @ts-ignore
     return (
         <>
-
-            <Dropdown className="d-inline" autoClose="outside">
-                <Dropdown.Toggle id="dropdown-autoclose-outside" className="mb-4 mt-3">
-                    Selecionar Marca
-                </Dropdown.Toggle>
-
-                <Dropdown.Menu>
-                    <Dropdown.Item onClick={() => setData(storeItems)}>Todos</Dropdown.Item>
-                    <Dropdown.Divider />
-                    <Dropdown.Item onClick={() => filterBrands("adidas")}>Adidas</Dropdown.Item>
-                    <Dropdown.Item onClick={() => filterBrands("puma")}>Puma</Dropdown.Item>
-                    <Dropdown.Item onClick={() => filterBrands("nike")}>Nike</Dropdown.Item>
-                    <Dropdown.Item onClick={() => filterBrands("vans")}>Vans</Dropdown.Item>
-                    <Dropdown.Item onClick={() => filterBrands("reebok")}>Reebok</Dropdown.Item>
-                </Dropdown.Menu>
-            </Dropdown>
-            {/*<input placeholder="¿Qué producto buscas?"*/}
-            {/*       type="text"*/}
-            {/*       value={text}*/}
-            {/*       onChange={(e) => setText(e.target.value)}*/}
-            {/*       style={{margin:10, borderRadius: 5, padding: 10}}*/}
-            {/*       autoFocus={true}/>*/}
-            <Row md={2} xs={1} lg={3} className="g-3">
-                {data.map(item => (
-                    <Col key={item.id}>
-                        <StoreItem {...item} />
-                    </Col>
-                ))}
-            </Row>
+            <div style={{display:"flex", flexDirection:"row", flexWrap:"wrap",gap:"15px", padding:"20px"}}>
+                <Button onClick={() => setData(storeItems)}>Todos</Button>
+                <Button onClick={() => filterBrands("adidas")}>adidas</Button>
+                <Button onClick={() => filterBrands("puma")}>puma</Button>
+                <Button onClick={() => filterBrands("nike")}>nike</Button>
+                <Button onClick={() => filterBrands("vans")}>vans</Button>
+                <Button onClick={() => filterBrands("reebok")}>reebok</Button>
+            </div>
+            <div className="input-group col-auto" style={{margin:"10px 0 20px 20px"}}>
+                <span className="bg-primary input-group-text" style={{color:"white"}}><FaSearch/></span>
+                <div className="col-sm-3">
+                    <input type="text" value={text} onChange={(e) => setText(e.target.value)} placeholder="Nombre del producto" aria-label="Producto" className="form-control"/>
+                </div>
+            </div>
+            {
+                text===""? (
+                    <Row md={2} xs={1} lg={3} className="g-3">
+                        {data.map(item => (
+                            <Col key={item.id}>
+                                <StoreItem {...item} />
+                            </Col>
+                        ))}
+                    </Row>
+                ) : (
+                    <Row md={2} xs={1} lg={3} className="g-3">
+                        {filteredServices.map(item => (
+                            <Col key={item.id}>
+                                <StoreItem {...item} />
+                            </Col>
+                        ))}
+                    </Row>
+                )
+            }
         </>
     )
+
+
 }

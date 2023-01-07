@@ -1,0 +1,126 @@
+.container{
+    position: relative;
+    max-width: 900px;
+    transform-style: preserve-3d;
+    padding: 10px;
+}
+.container .box{
+    position: relative;
+    width: 350px;
+    height: 500px;
+    background: #232323;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%,22rem),1fr));
+    margin: 10px 0px 10px 0px;
+    border-radius: 20px;
+    transform-style: preserve-3d;
+    transition: 0.5s;
+}
+.container .box::before{
+    content: attr(data-text);
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 6rem;
+    font-weight: 900;
+    color: white;
+    font-style: italic;
+    opacity: 0.04;
+    transition: 0.5s;
+}
+.container .box::after{
+    content: 'SHOES';
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    font-size: 5rem;
+    font-weight: 900;
+    color: white;
+    font-style: italic;
+    opacity: 0.04;
+    transition: 0.5s;
+}
+.container .box .name{
+    position: absolute;
+    top: 20px;
+    left: 0;
+    text-align: center;
+    color: white;
+    width: 100%;
+    padding: 0 15px;
+    transform-style: preserve-3d;
+    transform: translate3d(0,0,75px);
+    transition: 0.5s;
+    opacity: 1;
+    z-index: 10;
+}
+.container .box .price{
+    position: absolute;
+    top: 380px;
+    left: 0;
+    text-align: center;
+    color: #9a9a9a;
+    width: 100%;
+    transform-style: preserve-3d;
+    transform: translate3d(0,0,75px);
+    transition: 0.5s;
+    opacity: 1;
+    z-index: 10;
+}
+.container .box .buy{
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform-style: preserve-3d;
+    transform: translate3d(-50%,0,75px);
+    color: white;
+    background: #379BF7;
+    padding: 10px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: 0.5s;
+    opacity: 1;
+    z-index: 10;
+    cursor: pointer;
+}
+.container .box .buy:hover{
+    background: #116fc7;
+}
+.container .box .cart{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform-style: preserve-3d;
+    transform: translate3d(-50%,0,75px);
+    color: white;
+    padding: 10px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: 0.5s;
+    opacity: 1;
+    z-index: 10;
+}
+.container .box .product{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    max-width: 300px;
+    z-index: 11;
+    transform-style: preserve-3d;
+    transform: translate3d(-50%,-50%,100px) rotate(-15deg);
+    transition: 0.5s;
+    scale: 1.2;
+}
+@media screen and (max-width: 600px) {
+    .container .box{
+        display: flex;
+        justify-content: center;
+        margin: 10px 0px 10px 0px;
+    }
+}
+@media screen and (min-width: 376px) {
+    .container .box{
+        max-width: 500px;
+        margin: 0 auto;
+    }
+}

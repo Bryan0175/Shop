@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "name": "adidas Continental Trainers 80s Casual Classics",
+    "name": "Adidas Continental Trainers 80s Casual Classics",
     "brand": "adidas",
     "price": 289000,
     "imgUrl": "/imgs/adidas Continental Trainers @ 80s Casual Classics.png"
@@ -35,20 +35,6 @@
     "imgUrl": "/imgs/ADIDAS NMD R1 PrimeBlue.png"
   },
   {
-    "id": 6,
-    "name": "Adidas Originals Astir",
-    "brand": "adidas",
-    "price": 220000,
-    "imgUrl": "/imgs/Adidas Originals Astir.png"
-  },
-  {
-    "id": 7,
-    "name": "adidas Originals Centaur New Colourways",
-    "brand": "adidas",
-    "price": 309000,
-    "imgUrl": "/imgs/adidas Originals Centaur New Colourways.png"
-  },
-  {
     "id": 8,
     "name": "Adidas Retro Forum 84 - Sneakers",
     "brand": "adidas",
@@ -64,7 +50,7 @@
   },
   {
     "id": 10,
-    "name": "Nike Air Jordan 1 Shattered Backboard 2_0 - 2016",
+    "name": "Nike Air Jordan 1 Shattered Backboard - 2016",
     "brand": "nike",
     "price": 360000,
     "imgUrl": "/imgs/Nike Air Jordan 1 Shattered Backboard 2_0 - 2016.png"
@@ -84,39 +70,11 @@
     "imgUrl": "/imgs/Nike SB Charge Canvas Preto.png"
   },
   {
-    "id": 13,
-    "name": "Nike SB Dunk",
-    "brand": "nike",
-    "price": 141000,
-    "imgUrl": "/imgs/Nike SB Dunk.png"
-  },
-  {
-    "id": 14,
-    "name": "Nike Master Black",
-    "brand": "nike",
-    "price": 209000,
-    "imgUrl": "/imgs/Nike Master Black.png"
-  },
-  {
     "id": 15,
-    "name": "puma Axelion Block",
+    "name": "Puma Axelion Block",
     "brand": "puma",
     "price": 492000,
     "imgUrl": "/imgs/puma Axelion Block.png"
-  },
-  {
-    "id": 16,
-    "name": "Puma CA Pro Classic white",
-    "brand": "puma",
-    "price": 256000,
-    "imgUrl": "/imgs/Puma CA Pro Classic white.png"
-  },
-  {
-    "id": 17,
-    "name": "Puma Clyde Cow Suits Collection",
-    "brand": "puma",
-    "price": 198000,
-    "imgUrl": "/imgs/Puma Clyde Cow Suits Collection.png"
   },
   {
     "id": 18,
@@ -133,25 +91,11 @@
     "imgUrl": "/imgs/Puma Future Rider Core (Balsam Green).png"
   },
   {
-    "id": 20,
-    "name": "Puma RS 350 2018 Re-Invention Archive Green",
-    "brand": "puma",
-    "price": 272000,
-    "imgUrl": "/imgs/Puma RS 350 2018 Re-Invention Archive Green .png"
-  },
-  {
     "id": 21,
     "name": "Puma RS-78",
     "brand": "puma",
     "price": 350000,
     "imgUrl": "/imgs/Puma RS-78.png"
-  },
-  {
-    "id": 22,
-    "name": "Puma RS-Fast (Watermelon)",
-    "brand": "puma",
-    "price": 410000,
-    "imgUrl": "/imgs/Puma RS-Fast (Watermelon) - 7_5.png"
   },
   {
     "id": 23,
@@ -161,39 +105,11 @@
     "imgUrl": "/imgs/Puma RS-X Toys 369449 01.png"
   },
   {
-    "id": 24,
-    "name": "Puma States Winter Gum",
-    "brand": "puma",
-    "price": 116000,
-    "imgUrl": "/imgs/PUMA States 'Winter Gum' Pack.png"
-  },
-  {
-    "id": 25,
-    "name": "Puma Suede Classic Sneakers Black",
-    "brand": "puma",
-    "price": 530000,
-    "imgUrl": "/imgs/PUMA SUEDE CLASSIC + Mens Sneakers - 8_5 _ 352634-03 _ Black.png"
-  },
-  {
     "id": 26,
-    "name": "Puma Suede Classic Sneakers",
+    "name": "Puma Suede Classic Sneakers Red",
     "brand": "puma",
     "price": 347000,
     "imgUrl": "/imgs/PUMA SUEDE CLASSIC + Mens Sneakers - 11_5.png"
-  },
-  {
-    "id": 27,
-    "name": "Puma Viz Runner Black White",
-    "brand": "puma",
-    "price": 250000,
-    "imgUrl": "/imgs/Puma Viz Runner Men's Running Shoes Black White 191037-02 In Box.png"
-  },
-  {
-    "id": 28,
-    "name": "Puma Waxed Shoe - Grey Puma Silver",
-    "brand": "puma",
-    "price": 180000,
-    "imgUrl": "/imgs/Puma Waxed Shoe - Men's Shoes in Grey Puma Silver _ Buckle.png"
   },
   {
     "id": 29,
@@ -224,20 +140,6 @@
     "imgUrl": "/imgs/Reebok Classic Leather Legacy.png"
   },
   {
-    "id": 33,
-    "name": "Reebok Classics Cl 6000 (Gravy)",
-    "brand": "reebok",
-    "price": 480000,
-    "imgUrl": "/imgs/Reebok Classics Cl 6000 (Gravy).png"
-  },
-  {
-    "id": 34,
-    "name": "Reebok Club C",
-    "brand": "reebok",
-    "price": 600000,
-    "imgUrl": "/imgs/Reebok Club C.png"
-  },
-  {
     "id": 35,
     "name": "Reebok Cottweiler Zig 3d Storm Hydro Alabaster Grey Yellow G55691",
     "brand": "reebok",
@@ -245,39 +147,11 @@
     "imgUrl": "/imgs/Reebok Cottweiler Zig 3d Storm Hydro Alabaster Grey Yellow G55691 Us 7.png"
   },
   {
-    "id": 36,
-    "name": "Reebok GL 6000 Summer",
-    "brand": "reebok",
-    "price": 325000,
-    "imgUrl": "/imgs/REEBOK GL 6000 “SUMMER IN NEW ENGLAND”.png"
-  },
-  {
-    "id": 37,
-    "name": "Reebok lifestyle cl leather ctm r13",
-    "brand": "reebok",
-    "price": 654000,
-    "imgUrl": "/imgs/Reebok lifestyle cl leather ctm r13 + FREE SHIPPING.png"
-  },
-  {
     "id": 38,
     "name": "Reebok Pump Omni Zone II",
     "brand": "reebok",
     "price": 123000,
     "imgUrl": "/imgs/Reebok Pump Omni Zone II.png"
-  },
-  {
-    "id": 39,
-    "name": "Reebok Shaq Attaq",
-    "brand": "reebok",
-    "price": 498000,
-    "imgUrl": "/imgs/Reebok Shaq Attaq.png"
-  },
-  {
-    "id": 40,
-    "name": "Reebok Workout Plus 2759",
-    "brand": "reebok",
-    "price": 456000,
-    "imgUrl": "/imgs/Reebok Workout Plus 2759.png"
   },
   {
     "id": 41,
@@ -313,12 +187,5 @@
     "brand": "vans",
     "price": 111000,
     "imgUrl": "/imgs/Vans Sk8-Hi Reissue Decon Cap Available in Black.png"
-  },
-  {
-    "id": 46,
-    "name": "vans Vulcanize Lace-up Fashion printed Sneakers",
-    "brand": "vans",
-    "price": 245000,
-    "imgUrl": "/imgs/vans Vulcanize Shoes Lace-up Fashion printed  Sneakers - Blue -528 _ 41.png"
   }
 ]

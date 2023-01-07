@@ -1,4 +1,4 @@
-import {Button, Offcanvas, Stack} from "react-bootstrap"
+import {Offcanvas, Stack} from "react-bootstrap"
 import { useShoppingCart } from "../context/ShoppingCartContext"
 import { formatCurrency } from "../utilities/formatCurrency"
 import { CartItem } from "./CartItem"
@@ -15,20 +15,20 @@ export function ShoppingCart({ isOpen }: ShoppingCartProps) {
   const { closeCart, cartItems } = useShoppingCart()
   // @ts-ignore
   const [message, setMessage] = useState("");
-
   useEffect(()=>{
       const result = cartItems.map(fil => {
         // @ts-ignore
         const item = storeItems.find(i => i.id === fil.id)
         const total = formatCurrency((item?.price || 0) * fil.quantity)
         // @ts-ignore
-        return `${fil.quantity} - ${item.name}: ${total}`
+        return ` ${fil.quantity} - ${item.name} : ${total}`
       })
     // @ts-ignore
     setMessage(result)
   },[])
 
-    return (
+    // @ts-ignore
+  return (
     <Offcanvas show={isOpen} onHide={closeCart} placement="end">
       <Offcanvas.Header closeButton>
         <Offcanvas.Title>Productos</Offcanvas.Title>
@@ -49,7 +49,14 @@ export function ShoppingCart({ isOpen }: ShoppingCartProps) {
           </div>
             <ReactWhatsapp
                 number="57-322-421-3066"
-                message={"Buenas noches me gustaria comprar estos zapatos: "+message}
+                message={`Buenas me gustaria comprar estos zapatos: ${message} | TOTAL: `+
+                        formatCurrency(
+                            cartItems.reduce((total, cartItem) => {
+                                const item = storeItems.find(i => i.id === cartItem.id)
+                                return total + (item?.price || 0) * cartItem.quantity
+                            }, 0)
+                        )
+                }
                 element="button"
                 style={{borderRadius: "5px", borderColor:"#0d6efd", backgroundColor: "#0d6efd", color: "white", padding: "15px 0", fontSize:"19px"}}
             >Realizar pedido<FaWhatsapp style={{marginLeft: "10px"}}/>
